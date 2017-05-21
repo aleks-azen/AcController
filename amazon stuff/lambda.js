@@ -1,5 +1,6 @@
 var http = require('http')
 var toSay = "done";
+var server = 'serverurl'
     exports.handler = (event, context) => {
 
         try {
@@ -15,7 +16,7 @@ var toSay = "done";
                     // Launch Request
                     console.log(`LAUNCH REQUEST`)
                     var body = "";
-                    var endpoint = 'server/manual/bedroom/on/undefined';
+                    var endpoint = server+'/manual/bedroom/on/undefined';
                     toSay = "yes, master"
                     http.get(endpoint, function (result) {
                         console.log('Success, with: ' + result.statusCode);
@@ -46,7 +47,7 @@ var toSay = "done";
                             if(event.request.intent.slots.Room)
                                 room=event.request.intent.slots.Room.value;
                             if (room==undefined)room="bedroom";
-                            var endpoint = 'server/manual/' + room + "/on/"+duration;
+                            var endpoint = server+'/manual/' + room + "/on/"+duration;
                             http.get(endpoint, function (result) {
                                 console.log('Success, with: ' + result.statusCode);
                                 context.succeed(
@@ -63,13 +64,14 @@ var toSay = "done";
 
                         case "TurnOff":
                             var duration;
+                            toSay="done"
                             if(event.request.intent.slots.Duration)
                                 duration = event.request.intent.slots.Duration.value;
                             var room;
                             if(event.request.intent.slots.Room)
                                 room=event.request.intent.slots.Room.value;
                             if (room==undefined)room="bedroom";
-                            var endpoint = 'server/manual/' + room + "/off/"+duration;
+                            var endpoint = server+'/manual/' + room + "/off/"+duration;
                             http.get(endpoint, function (result) {
                                 console.log('Success, with: ' + result.statusCode);
                                 context.succeed(
@@ -89,7 +91,7 @@ var toSay = "done";
                             if(event.request.intent.slots.Room)
                                 room=event.request.intent.slots.Room.value;
                             if (room==undefined)room="bedroom";
-                            var endpoint = 'server/active/'+room+"/disabled"
+                            var endpoint = server+'/active/'+room+"/disabled"
                             toSay="disabled";
                             http.get(endpoint, function (result) {
                                 console.log('Success, with: ' + result.statusCode);
@@ -111,7 +113,7 @@ var toSay = "done";
                             if(event.request.intent.slots.Room)
                                 room=event.request.intent.slots.Room.value;
                             if (room==undefined)room="bedroom";
-                            var endpoint = 'server/active/'+room+"/sensor"
+                            var endpoint = server+'/active/'+room+"/sensor"
                             toSay="disabled";
                             http.get(endpoint, function (result) {
                                 console.log('Success, with: ' + result.statusCode);
@@ -133,7 +135,7 @@ var toSay = "done";
                                 room=event.request.intent.slots.Room.value;
                             if (room==undefined)room="bedroom";
                             var time = event.request.intent.slots.Time.value;
-                            var endpoint = 'server/setTime/'+room+"/1/"+time;
+                            var endpoint = server+'/setTime/'+room+"/1/"+time;
                             toSay="morning time set";
                             http.get(endpoint, function (result) {
                                 console.log('Success, with: ' + result.statusCode);
@@ -155,7 +157,7 @@ var toSay = "done";
                                 room=event.request.intent.slots.Room.value;
                             if (room==undefined)room="bedroom";
                             var time = event.request.intent.slots.Time.value;
-                            var endpoint = 'server/setTime/'+room+"/2/"+time;
+                            var endpoint = server+'/setTime/'+room+"/2/"+time;
                             toSay="night time set";
                             http.get(endpoint, function (result) {
                                 console.log('Success, with: ' + result.statusCode);
@@ -176,7 +178,7 @@ var toSay = "done";
                                 room=event.request.intent.slots.Room.value;
                             if (room==undefined)room="bedroom";
                             var temp = event.request.intent.slots.Temp.value;
-                            var endpoint = 'server/setTemp/'+room+"/"+temp;
+                            var endpoint = server+'/setTemp/'+room+"/"+temp;
                             toSay="temperature set";
                             http.get(endpoint, function (result) {
                                 console.log('Success, with: ' + result.statusCode);
@@ -197,7 +199,7 @@ var toSay = "done";
                                 room=event.request.intent.slots.Room.value;
                             if (room==undefined)room="bedroom";
                             var tolerance = event.request.intent.slots.Tolerance.value;
-                            var endpoint = 'server/setTolerance/'+room+"/"+tolerance;
+                            var endpoint = server+'/setTolerance/'+room+"/"+tolerance;
                             toSay="tolerance set";
                             http.get(endpoint, function (result) {
                                 console.log('Success, with: ' + result.statusCode);
