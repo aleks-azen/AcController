@@ -1,0 +1,103 @@
+{
+  "intents": [
+    {
+      "slots": [
+        {
+          "name": "Room",
+          "type": "AMAZON.Room"
+        },
+        {
+          "name": "Duration",
+          "type": "AMAZON.DURATION"
+        }
+      ],
+      "intent": "TurnOn"
+    },
+    {
+      "slots": [
+        {
+          "name": "Room",
+          "type": "AMAZON.Room"
+        },
+        {
+          "name": "Duration",
+          "type": "AMAZON.DURATION"
+        }
+      ],
+      "intent": "TurnOff"
+    },
+    {
+      "slots": [
+        {
+          "name": "Room",
+          "type": "AMAZON.Room"
+        }
+      ],
+      "intent": "Disable"
+    },
+    {
+      "intent": "LowerBrightness"
+    },
+    {
+      "slots": [
+        {
+          "name": "Room",
+          "type": "AMAZON.Room"
+        }
+      ],
+      "intent": "Enable"
+    },
+    {
+      "slots": [
+        {
+          "name": "Room",
+          "type": "AMAZON.Room"
+        },
+        {
+          "name": "Temp",
+          "type": "AMAZON.NUMBER"
+        }
+      ],
+      "intent": "Sensor"
+    },
+    {
+      "slots": [
+        {
+          "name": "Room",
+          "type": "AMAZON.Room"
+        },
+        {
+          "name": "Tolerance",
+          "type": "AMAZON.NUMBER"
+        }
+      ],
+      "intent": "SetTolerance"
+    },
+    {
+      "slots": [
+        {
+          "name": "Room",
+          "type": "AMAZON.Room"
+        },
+        {
+          "name": "Time",
+          "type": "AMAZON.TIME"
+        }
+      ],
+      "intent": "TurnOffTime"
+    },
+    {
+      "slots": [
+        {
+          "name": "Room",
+          "type": "AMAZON.Room"
+        },
+        {
+          "name": "Time",
+          "type": "AMAZON.TIME"
+        }
+      ],
+      "intent": "TurnOnTime"
+    }
+  ]
+}

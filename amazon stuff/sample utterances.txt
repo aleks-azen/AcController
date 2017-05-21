@@ -1,0 +1,55 @@
+TurnOn turn on
+TurnOn turn on in {Room} for {Duration}
+TurnOn turn on for {Duration} in {Room}
+TurnOn turn on in {Room}
+TurnOn turn on for {Duration}
+TurnOn on
+TurnOn on in {Room}
+TurnOn on in {Room} for {Duration}
+TurnOn on for {Duration} in {Room}
+TurnOn on for {Duration}
+TurnOn activate
+TurnOn activate in {Room}
+TurnOn activate for {Duration}
+TurnOn activate in {Room} for {Duration}
+TurnOn activate for {Duration} in {Room}
+TurnOff turn off
+TurnOff turn off for {Duration}
+TurnOff turn off in {Room}
+TurnOff turn off in {Room} for {Duration}
+TurnOff turn off for {Duration} in {Room}
+TurnOff off
+TurnOff off for {Duration}
+TurnOff off in {Room}
+TurnOff off in {Room} for {Duration}
+TurnOff off for {Duration} in {Room}
+Disable disable
+Disable disable in {Room}
+Enable enable
+Enable enable in {Room}
+Sensor set temperature to {Temp}
+Sensor set temperature to {Temp} in {Room}
+Sensor set temp to {Temp}
+Sensor set temp to {Temp} in {Room}
+Sensor set target temperature to {Temp}
+Sensor set target temperature to {Temp} in {Room}
+SetTolerance set tolerance to {Tolerance}
+SetTolerance set tolerance to {Tolerance} in {Room}
+TurnOffTime set off time to {Time}
+TurnOffTime set off time to {Time} in {Room}
+TurnOffTime set turn off time to {Time}
+TurnOffTime set turn off time to {Time} in {Room}
+TurnOffTime set first time to {Time}
+TurnOffTime set first time to {Time} in {Room}
+TurnOffTime set morning time to {Time}
+TurnOffTime set morning time to {Time} in {Room}
+TurnOnTime set on time to {Time}
+TurnOnTime set on time to {Time} in {Room}
+TurnOnTime set turn on time to {Time}
+TurnOnTime set turn ontime to {Time} in {Room}
+TurnOnTime set second time to {Time}
+TurnOnTime set second time to {Time} in {Room}
+TurnOnTime set last time to {Time}
+TurnOnTime set last time to {Time} in {Room}
+TurnOnTime set night time to {Time} in {Room}
+TurnOnTime set night time to {Time}

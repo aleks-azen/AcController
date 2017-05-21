@@ -1,0 +1,6 @@
+log/
+node_modules/
+*.log
+prefs.js
+prefs/
+test.js
